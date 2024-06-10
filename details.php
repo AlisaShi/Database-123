@@ -90,7 +90,7 @@ include('header.php');
 ?>
 <header>
 <nav>
-    <h2><?php echo $location['location_name']; ?></h2>
+    <h1><?php echo $location['location_name']; ?></h1>
 </nav>
 </header>
     <main>

@@ -124,6 +124,7 @@ if (session_status() == PHP_SESSION_NONE) {
                         <li><a href="manage_users.php">管理使用者</a></li>
                         <li><a href="manage_departments.php">管理部門</a></li>
                     <?php else : ?>
+                        <li><a href="index.php">景點地圖</a></li>
                         <li><a href="trails.php">步道地圖</a></li>
                         <li><a href="leaflet.php">林道地圖</a></li>
                         <li><a href="news.php">最新消息</a></li>
@@ -137,6 +138,7 @@ if (session_status() == PHP_SESSION_NONE) {
     
                     <?php endif; ?>
                 <?php else : ?>
+                    <li><a href="index.php">景點地圖</a></li>
                     <li><a href="trails.php">步道地圖</a></li>
                     <li><a href="leaflet.php">林道地圖</a></li>
                     <li><a href="news.php">最新消息</a></li>

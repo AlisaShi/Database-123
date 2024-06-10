@@ -1,8 +1,4 @@
 <?php
-include('header.php');
-?>
-
-<?php
 include 'db.php';
 
 
@@ -23,6 +19,14 @@ $result = $conn->query($sql);
 <html lang="en">
 
 <head>
+<?php
+include('header.php');
+?>
+    <header>
+        <nav>
+            <h1>天氣預報</h1>
+        </nav>
+    </header>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>天氣預報</title>
@@ -30,7 +34,7 @@ $result = $conn->query($sql);
 </head>
 
 <body>
-    <h1>天氣預報</h1>
+    
     
     <main>
         <h2>天氣預報列表</h2>

@@ -92,7 +92,7 @@ include('header.php');
 <header>
 <nav>
     <ul>
-        <h2><?php echo htmlspecialchars($trail['TR_CNAME']); ?></h2>
+        <h1><?php echo htmlspecialchars($trail['TR_CNAME']); ?></h1>
     </ul>
 </nav>
 </header>

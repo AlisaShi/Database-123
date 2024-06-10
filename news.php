@@ -26,7 +26,10 @@ $result = $conn->query($sql);
     <?php
     include('header.php');
     ?>
+    <header><nav>
     <h1>最新消息</h1>
+    </nav></header>
+    
     
     <main>
         <form method="GET" action="">
