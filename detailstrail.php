@@ -98,6 +98,18 @@ include('header.php');
 </header>
 
     <main>
+    <?php if ($message): ?>
+            <script>
+                alert("<?php echo htmlspecialchars($message); ?>");
+            </script>
+        <?php endif; ?>
+    <?php if ($is_logged_in): ?>
+        <button onclick="window.location.href='favorite.php?action=add&location_id=<?php echo $id; ?>'">收藏</button>
+        <button onclick="window.location.href='notes.php?location_id=<?php echo $id; ?>'">管理筆記與待辦事項</button>
+    <?php else: ?>
+        <p>請<a href="login.php">登入</a>以收藏景點和管理筆記。</p>
+    <?php endif; ?>
+
         <p><strong>Trail ID:</strong> <?php echo htmlspecialchars($trail['TRAILID']); ?></p>
         <p><strong>City ID:</strong> <?php echo htmlspecialchars($trail['City_ID']); ?></p>
         <p><strong>District ID:</strong> <?php echo htmlspecialchars($trail['District_ID']); ?></p>

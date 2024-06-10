@@ -103,6 +103,13 @@ include('header.php');
                 alert("<?php echo htmlspecialchars($message); ?>");
             </script>
         <?php endif; ?>
+        <?php if ($is_logged_in): ?>
+        <button onclick="window.location.href='favorite.php?action=add&location_id=<?php echo $id; ?>'">收藏</button>
+        <button onclick="window.location.href='notes.php?location_id=<?php echo $id; ?>'">管理筆記與待辦事項</button>
+    <?php else: ?>
+        <p>請<a href="login.php">登入</a>以收藏景點和管理筆記。</p>
+    <?php endif; ?>
+
         <p><strong>地址:</strong> <?php echo $location['address']; ?></p>
         <p><strong>描述:</strong> <?php echo $location['description']; ?></p>
         <p><strong>網址:</strong> <a href="<?php echo $location['page_url']; ?>" target="_blank"><?php echo $location['page_url']; ?></a></p>
@@ -112,13 +119,7 @@ include('header.php');
         <p><strong>是否允許小型車進入:</strong> <?php echo $location['small_vehicle_allowed'] ? 'Yes' : 'No'; ?></p>
         <p><strong>是否允許大型車進入:</strong> <?php echo $location['large_vehicle_allowed'] ? 'Yes' : 'No'; ?></p>
 
-        <?php if ($is_logged_in): ?>
-        <button onclick="window.location.href='favorite.php?action=add&location_id=<?php echo $id; ?>'">收藏</button>
-        <button onclick="window.location.href='notes.php?location_id=<?php echo $id; ?>'">管理筆記與待辦事項</button>
-    <?php else: ?>
-        <p>請<a href="login.php">登入</a>以收藏景點和管理筆記。</p>
-    <?php endif; ?>
-
+        
 
         <h2>該地區一周天氣預報: <?php echo $district['District']; ?></h2>
         <div> 早上: 06:00:00 ~ 18:00:00</div>
