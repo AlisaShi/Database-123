@@ -1,5 +1,6 @@
 
 <?php
+session_start();
 include 'db.php';
 
 // 獲取URL中的景點ID
@@ -56,8 +57,8 @@ if ($result_tr->num_rows > 0) {
     $managing_department = "未知";
 }
 
-$is_logged_in = isset($_SESSION['user_id']);
-
+$is_logged_in = isset($_SESSION['User_ID']);
+$message = $_GET['message'] ?? '';
 ?>
 
 <!DOCTYPE html>
@@ -97,6 +98,11 @@ include('header.php');
 </nav>
 </header>
     <main>
+    <?php if ($message): ?>
+            <script>
+                alert("<?php echo htmlspecialchars($message); ?>");
+            </script>
+        <?php endif; ?>
         <p><strong>地址:</strong> <?php echo $location['address']; ?></p>
         <p><strong>描述:</strong> <?php echo $location['description']; ?></p>
         <p><strong>網址:</strong> <a href="<?php echo $location['page_url']; ?>" target="_blank"><?php echo $location['page_url']; ?></a></p>

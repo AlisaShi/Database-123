@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // 密碼正確
             $_SESSION['User_ID'] = $row['User_ID'];
             $_SESSION['User_first_name'] = $row['User_first_name'];
+            $_SESSION['user_id'] = $row['User_ID'];
             header('Location: index.php');
             exit();
         } else {
