@@ -124,15 +124,29 @@ if (session_status() == PHP_SESSION_NONE) {
                         <li><a href="manage_users.php">管理使用者</a></li>
                         <li><a href="manage_departments.php">管理部門</a></li>
                     <?php else : ?>
+                        <li><a href="trails.php">步道地圖</a></li>
+                        <li><a href="leaflet.php">林道地圖</a></li>
                         <li><a href="news.php">最新消息</a></li>
                         <li><a href="weather.php">天氣預報</a></li>
-                        <li><a href="note.php">筆記</a></li>
+                        
+                        
+        <form method="GET" action="results.php">
+            <input type="text" id="search" name="search" placeholder="輸入景點名稱或描述">
+            <input type="submit" value="查詢">
+        </form>
+    
                     <?php endif; ?>
                 <?php else : ?>
                     <li><a href="trails.php">步道地圖</a></li>
                     <li><a href="leaflet.php">林道地圖</a></li>
                     <li><a href="news.php">最新消息</a></li>
                     <li><a href="weather.php">天氣預報</a></li>
+                    
+        <form method="GET" action="results.php">
+            <input type="text" id="search" name="search" placeholder="輸入景點名稱或描述">
+            <input type="submit" value="查詢">
+        </form>
+    
                 <?php endif; ?>
             </ul>
         </nav>
@@ -146,12 +160,7 @@ if (session_status() == PHP_SESSION_NONE) {
             <a href="index.php">首頁</a>
         </div>
     </header>
-    <main>
-        <form method="GET" action="results.php">
-            <input type="text" id="search" name="search" placeholder="輸入景點名稱或描述">
-            <input type="submit" value="查詢">
-        </form>
-    </main>
+    
 </body>
 
 </html>

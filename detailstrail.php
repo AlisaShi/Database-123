@@ -1,6 +1,4 @@
-<?php
-include('header.php');
-?>
+
 <?php
 include 'db.php';
 
@@ -88,8 +86,17 @@ if ($tr_id) {
 </head>
 
 <body>
-    <?php echo htmlspecialchars($trail['TR_CNAME']); ?></h1>
-    
+<?php
+include('header.php');
+?>
+<header>
+<nav>
+    <ul>
+        <h2><?php echo htmlspecialchars($trail['TR_CNAME']); ?></h2>
+    </ul>
+</nav>
+</header>
+
     <main>
         <p><strong>Trail ID:</strong> <?php echo htmlspecialchars($trail['TRAILID']); ?></p>
         <p><strong>City ID:</strong> <?php echo htmlspecialchars($trail['City_ID']); ?></p>

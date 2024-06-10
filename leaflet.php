@@ -1,10 +1,17 @@
-<?php
-include('header.php');
-?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
+<?php
+include('header.php');
+?>
+<header>
+  <nav>
+  <h1>林道地圖</h1>
+  </nav>
+</header>
+
   <title>步道地圖</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
@@ -55,8 +62,6 @@ include('header.php');
 </head>
 
 <body>
-  <h1>步道地圖</h1>
-
 
   <div id="map"></div>
   <script>

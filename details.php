@@ -1,6 +1,4 @@
-<?php
-include('header.php');
-?>
+
 <?php
 include 'db.php';
 
@@ -87,8 +85,14 @@ if ($result_tr->num_rows > 0) {
 </head>
 
 <body>
-    <h1><?php echo $location['location_name']; ?></h1>
-    
+<?php
+include('header.php');
+?>
+<header>
+<nav>
+    <h2><?php echo $location['location_name']; ?></h2>
+</nav>
+</header>
     <main>
         <p><strong>地址:</strong> <?php echo $location['address']; ?></p>
         <p><strong>描述:</strong> <?php echo $location['description']; ?></p>
